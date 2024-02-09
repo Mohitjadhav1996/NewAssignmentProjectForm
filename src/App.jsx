@@ -65,8 +65,8 @@ const App = () => {
   console.log(formData);
 
   return (
-    <div className="outer-container">
-      <div className="container">
+    <section className="outer-container">
+      <article className="container">
         <h2>Contact Information</h2>
         <Formik
           initialValues={{
@@ -84,17 +84,17 @@ const App = () => {
         >
           {({ isSubmitting, isValid, dirty, values }) => (
             <Form>
-              <div className="form-row">
+              <section className="form-row">
                 <InputField label="First Name" name="firstName" type="text" />
 
                 <InputField label="Last Name" name="lastName" type="text" />
-              </div>
-              <div className="form-row">
+              </section>
+              <section className="form-row">
                 <InputField label="Email" name="email" type="email" />
                 <InputField label="Phone" name="phone" type="tel" />
-              </div>
-              <div className="form-row">
-                <div className="form-group">
+              </section>
+              <section className="form-row">
+                <section className="form-group">
                   <label htmlFor="country">
                     Country<sup>*</sup>
                   </label>
@@ -110,8 +110,8 @@ const App = () => {
                     component="span"
                     className="error"
                   />
-                </div>
-                <div className="form-group">
+                </section>
+                <section className="form-group">
                   <label htmlFor="state">
                     State<sup>*</sup>
                   </label>
@@ -136,20 +136,20 @@ const App = () => {
                     component="span"
                     className="error"
                   />
-                </div>
-              </div>
-              <div className="form-row">
+                </section>
+              </section>
+              <section className="form-row">
                 <InputField
                   label="Telephone (Optional)"
                   name="telephone"
                   type="tel"
                   labelmandate={true}
                 />
-                <div className="form-group">
+                <section className="form-group">
                   <label htmlFor="address">Address</label>
                   <Field as="textarea" name="address" id="address" />
-                </div>
-              </div>
+                </section>
+              </section>
               <button
                 type="submit"
                 disabled={isSubmitting || !isValid || !dirty}
@@ -159,8 +159,8 @@ const App = () => {
             </Form>
           )}
         </Formik>
-      </div>
-    </div>
+      </article>
+    </section>
   );
 };
 
